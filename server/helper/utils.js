@@ -21,7 +21,15 @@ const getPatchSetQueries = (body, index) => {
   return {setQueries, values}
 }
 
+const getError = (code, errorMessage) => {
+  return {
+    code,
+    error: new Error(errorMessage)
+  }
+}
+
 module.exports = {
   getUniqueId,
   getPatchSetQueries,
+  getError,
 }
